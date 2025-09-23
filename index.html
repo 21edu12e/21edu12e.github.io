@@ -3,92 +3,148 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Servicio Técnico a Domicilio- edu.g.r.s.a</title>
+  <title>Servicio Técnico a Domicilio - edu.g.r.s.a</title>
+  <!-- Fuente profesional -->
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap" rel="stylesheet">
   <style>
     body {
       margin: 0;
-      font-family: Arial, sans-serif;
-      background: #121212;
-      color: #fff;
+      font-family: 'Poppins', sans-serif;
+      background: #f8f9fa;
+      color: #333;
       display: flex;
       justify-content: center;
-      align-items: center;
+      align-items: flex-start;
       min-height: 100vh;
+      padding: 40px 15px;
     }
 
     .marco {
-      background-image: url('0cf3817e-3850-419e-92d0-836feef83afd.png');
-      background-size: cover;
-      background-position: center;
-      width: 90%;
-      max-width: 600px;
-      padding: 40px 25px;
+      background: #fff;
+      width: 100%;
+      max-width: 850px;
+      padding: 40px 30px;
       box-sizing: border-box;
+      border-radius: 16px;
+      box-shadow: 0 8px 25px rgba(0, 0, 0, 0.1);
       text-align: center;
-      background-color: rgba(0, 0, 0, 0.6);
-      background-blend-mode: darken;
-      border-radius: 12px;
     }
 
     .marco img {
-      width: 120px;
+      width: 100px;
       margin-bottom: 15px;
-      border-radius: 8px;
     }
 
     h1 {
-      font-size: 2rem;
-      margin-bottom: 10px;
+      font-size: 1.8rem;
+      margin-bottom: 12px;
+      color: #0056b3;
     }
 
     p {
       font-size: 1rem;
       margin-bottom: 20px;
+      color: #555;
+    }
+
+    /* Menú de servicios */
+    .menu {
+      display: grid;
+      grid-template-columns: 1fr;
+      gap: 12px;
+      margin-top: 20px;
+    }
+
+    @media (min-width: 768px) {
+      .menu {
+        grid-template-columns: 1fr 1fr; /* dos columnas en pantallas grandes */
+      }
     }
 
     .menu button {
       width: 100%;
-      padding: 12px;
-      margin: 8px 0;
+      padding: 14px;
       border: none;
-      border-radius: 8px;
+      border-radius: 10px;
       cursor: pointer;
       font-size: 1rem;
-      background-color: #ff4081;
+      font-weight: 600;
+      background-color: #00bcd4;
       color: #fff;
       transition: all 0.3s ease;
     }
 
     .menu button:hover {
-      background-color: #e73370;
+      background-color: #0097a7;
+      transform: translateY(-2px);
+      box-shadow: 0 4px 10px rgba(0, 188, 212, 0.3);
     }
 
-    .contacto, .ubicacion, .testimonios {
-      margin-top: 25px;
+    /* Testimonios en cards */
+    .testimonios {
+      margin-top: 30px;
+    }
+
+    .testimonio {
+      background: #f1f9ff;
+      padding: 15px;
+      margin: 12px 0;
+      border-left: 5px solid #00bcd4;
+      border-radius: 10px;
       font-size: 0.95rem;
+      color: #444;
+      text-align: left;
+      box-shadow: 0 4px 10px rgba(0, 0, 0, 0.05);
+    }
+
+    .testimonio strong {
+      color: #0056b3;
+    }
+
+    /* Formulario */
+    .formulario {
+      margin-top: 30px;
+      text-align: left;
+    }
+
+    .formulario p {
+      margin-bottom: 10px;
+      font-weight: 600;
+      color: #0056b3;
     }
 
     .formulario input {
       width: 100%;
-      padding: 10px;
-      margin: 6px 0;
-      border-radius: 6px;
-      border: none;
+      padding: 12px;
+      margin: 8px 0;
+      border-radius: 8px;
+      border: 1px solid #ccc;
+      font-size: 0.95rem;
     }
 
     .formulario button {
-      background-color: #03dac6;
-      color: #000;
+      background-color: #0056b3;
+      color: #fff;
       font-weight: bold;
-      padding: 10px;
+      padding: 12px;
       border: none;
-      border-radius: 6px;
+      border-radius: 8px;
       cursor: pointer;
       margin-top: 10px;
+      width: 100%;
+      transition: all 0.3s ease;
     }
 
     .formulario button:hover {
-      background-color: #01c4b0;
+      background-color: #003d80;
+      box-shadow: 0 4px 12px rgba(0, 86, 179, 0.3);
+    }
+
+    /* Contacto */
+    .contacto, .ubicacion {
+      margin-top: 25px;
+      font-size: 0.95rem;
+      color: #444;
     }
   </style>
 </head>
@@ -96,25 +152,32 @@
 
   <div class="marco">
     <img src="logo.png" alt="Logo Servicio Técnico">
-    <h1>Servicio Técnico a Domicilio-edu.g.r.-ec</h1>
+    <h1>Servicio Técnico a Domicilio</h1>
     <p>Instalación de Windows, Linux, Google TV y más servicios tecnológicos en Guayaquil.</p>
 
+    <!-- Menú de servicios -->
     <div class="menu">
       <button onclick="window.location.href='https://wa.me/593986758841?text=Hola,%20quiero%20info%20sobre%20instalación%20de%20SO'">🖥️ Instalación de sistemas operativos</button>
       <button onclick="window.location.href='https://wa.me/593986758841?text=Hola,%20necesito%20mantenimiento%20de%20PC/laptop'">🧹 Mantenimiento de PC y laptops</button>
       <button onclick="window.location.href='https://wa.me/593986758841?text=Hola,%20quiero%20flashear%20mi%20celular%20Samsung/Xiaomi'">📱 Flasheo y desbloqueo FRP</button>
+      <button onclick="window.location.href='https://wa.me/593986758841?text=Hola,%20quiero%20eliminar%20virus%20y%20optimizar%20mi%20PC'">🛡️ Eliminación de virus y optimización</button>
+      <button onclick="window.location.href='https://wa.me/593986758841?text=Hola,%20quiero%20instalación%20de%20cámaras%20de%20seguridad'">🎥 Instalación de cámaras de seguridad (solo dueños de la propiedad)</button>
+      <button onclick="window.location.href='https://wa.me/593986758841?text=Hola,%20quiero%20instalar%20extensores%20de%20wifi%20y%20programas'">📶 Instalación de extensores WiFi y programas (Office, antivirus, etc.)</button>
     </div>
 
+    <!-- Ubicación -->
     <div class="ubicacion">
       <p>📍 Cobertura: Flor de Bastión, Mall del Sur, Mall del Sol y alrededores.</p>
     </div>
 
+    <!-- Testimonios -->
     <div class="testimonios">
-      <p>⭐ “Me salvó el celular, no me acordaba mi patrón y fue rápido y confiable.” – Karen, Guayaquil</p>
-      <p>⭐ “Mi laptop estaba lenta y ahora quedó como nueva. Recomendado.” – Andrés, Bastión Popular</p>
-      <p>⭐ “Mi PC antigua no era compatible con Windows 11 y la dejó funcionando chévere. Recomendado.” – Andrés Zamora, Bastión Popular</p>
+      <div class="testimonio">⭐ “Me salvó el celular, no me acordaba mi patrón y fue rápido y confiable.” <br><strong>– Karen, Guayaquil</strong></div>
+      <div class="testimonio">⭐ “Mi laptop estaba lenta y ahora quedó como nueva. Recomendado.” <br><strong>– Andrés, Bastión Popular</strong></div>
+      <div class="testimonio">⭐ “Mi PC antigua no era compatible con Windows 11 y la dejó funcionando chévere.” <br><strong>– Andrés Zamora</strong></div>
     </div>
 
+    <!-- Formulario -->
     <div class="formulario">
       <p>📩 Solicita tu servicio:</p>
       <input type="text" placeholder="Tu nombre">
@@ -122,6 +185,7 @@
       <button>Enviar solicitud</button>
     </div>
 
+    <!-- Contacto -->
     <div class="contacto">
       <p>📞 WhatsApp directo: <strong>+593 98 675 8841</strong></p>
     </div>
